@@ -5,6 +5,20 @@
 
 library(dplyr)
 
+# download the dataset and unzip folder
+dataSourceUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+dataSourceFile <- "UCI HAR Dataset.zip"
+
+if (!file.exists(dataSourceFile)){
+  download.file(dataSourceUrl, dataSourceFile, mode = "wb")
+}
+
+dataDir <- "UCI HAR Dataset"
+if(!file.exists(dataDir)){
+  unzip(dataSourceFile)
+}
+
+
 features_list <- read.table("features.txt", col.names = c("id","features"))
 activity <- read.table("activity_labels.txt", col.names = c("label","activity"))
 
