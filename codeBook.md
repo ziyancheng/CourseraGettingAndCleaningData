@@ -1,9 +1,9 @@
-Code book for Coursera Getting and Cleanning Data Project
+## Code book for Coursera Getting and Cleanning Data Project
 The dataset is called tidy.txt in this repo.
 
-Data
+** Data
    tidy.txt
-Variables
+** Variables
   Identifiers: 
       subject
       activity
